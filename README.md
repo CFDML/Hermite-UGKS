@@ -1,6 +1,7 @@
 # Hermite-UGKS
 
-[![arXiv: 2507.10021](https://img.shields.io/badge/arXiv-2507.10021-b31b1b.svg)](https://arxiv.org/abs/2507.10021)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![arXiv: 2507.10021](https://img.shields.io/badge/arXiv-2507.10021-b31b1b.svg)](https://arxiv.org/abs/2507.10021)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Fortran reference implementation accompanying the paper **“An efficient solution algorithm for force-driven continuum and rarefied flows”** by Shuangqing Liu, Zuoxu Li, Yonghao Zhang, and Tianbai Xiao ([arXiv:2507.10021](https://arxiv.org/abs/2507.10021)).
 
