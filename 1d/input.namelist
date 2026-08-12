@@ -1,0 +1,41 @@
+! ------------------------------------------------------------
+! Input configuration for the 1D UGKS + Hermite solver.
+! Edit this file to set all run parameters. Lines starting with '!' are
+! comments. The namelist block must begin with '&params' and end with '/'.
+! ------------------------------------------------------------
+&params
+  ! ---- physical space ----
+  nx          = 600
+  xlength     = 1.0
+
+  ! ---- velocity space ----
+  nv          = 100
+  vmax        = 5.0
+  Tref        = 1.0
+  quad_type   = 'newton_cotes'
+
+  ! ---- body-force term ----
+  ! force_type: 'finite_difference' (velocity-space FD of f) or 'hermite' (spectral)
+  force_type  = 'hermite'
+  Nm          = 6          ! Hermite expansion order (used only if force_type='hermite')
+
+  ! ---- time stepping ----
+  cfl         = 0.5
+  maxtime     = 0.2
+
+  ! ---- case / physics ----
+  ! case_id: 2 = hydrostatic equilibrium, 3 = Sod shock tube, 4 = Fourier flow
+  case_id     = 3
+  knudsen     = 0.01
+  phi         = -1.0
+  TwL         = 1.0
+  TwR         = 1.1
+  refpfile    = ''
+/
+! ------------------------------------------------------------
+! Hermite/Gauss-Hermite settings used by cases/*.namelist:
+!
+!   case 2: nx=600 nv=36 Nm=6  Kn=1.0  phi=-1.0 maxtime=0.08
+!   case 3: nx=600 nv=34 Nm=6  Kn=0.01 phi=-1.0 maxtime=0.2
+!   case 4: nx=800 nv=22 Nm=10 Kn=0.1  phi=+2.0 maxtime=20 TwL=1.0 TwR=1.1
+! ------------------------------------------------------------

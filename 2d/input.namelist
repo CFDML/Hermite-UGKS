@@ -1,0 +1,47 @@
+! ------------------------------------------------------------
+! Input configuration for the 2D UGKS + Hermite solver.
+! Edit this file to set all run parameters. Lines starting with '!' are
+! comments. The namelist block must begin with '&params' and end with '/'.
+! ------------------------------------------------------------
+&params
+  ! ---- physical space ----
+  nx          = 3
+  ny          = 100
+  xlength     = 0.1
+  ylength     = 1.0
+
+  ! ---- velocity space ----
+  nv          = 16
+  vmax        = 5.0
+  Tref        = 1.0
+  quad_type   = 'gauss_hermite'
+
+  ! ---- body-force term ----
+  ! force_type: 'finite_difference', legacy 'hermite', or corrected
+  !             two-dimensional 'hermite_symmetric'
+  force_type  = 'hermite_symmetric'
+  Nm          = 7
+
+  ! ---- time stepping ----
+  ! Poiseuille stops when all mass-scaled residuals fall below eps=1e-7.
+  ! maxtime is only the safety limit used by the validated steady case.
+  cfl         = 0.8
+  maxtime     = 200.0
+
+  ! ---- case / physics ----
+  ! case_id: 6 = Rayleigh-Taylor, 5 = Poiseuille
+  case_id     = 5
+  knudsen     = 0.02
+  phi         = 0.1
+  TwL         = 1.0
+  TwR         = 1.0
+/
+! ------------------------------------------------------------
+! Validated Hermite case files are under cases/:
+!
+!   poiseuille_fast.namelist: 3x100, GH16, Nm=7, t=0.2
+!   poiseuille_fast_symmetric.namelist: corrected tensor, t=0.2
+!   poiseuille_steady.namelist: same grid/rule, steady residual stop
+!   rt_60_fast.namelist: 60x60, GH20, Nm=1, t=0.14
+!   rt_120.namelist: 120x120, GH20, Nm=1, t=0.14
+! ------------------------------------------------------------

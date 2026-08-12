@@ -1,0 +1,20 @@
+&params
+  nx          = 600
+  xlength     = 1.0
+  nv          = 34
+  vmax        = 5.0
+  Tref        = 1.0
+  quad_type   = 'gauss_hermite'
+  force_type  = 'hermite'
+  Nm          = 6
+  cfl         = 0.5
+  maxtime     = 0.2
+  steady_tol  = 1.0e-9
+  mass_tol    = 1.0e-10
+  case_id     = 3
+  knudsen     = 0.01
+  phi         = -1.0
+  TwL         = 1.0
+  TwR         = 1.1
+  refpfile    = ''
+/

@@ -1,0 +1,7 @@
+&params
+  nx=3, ny=8, xlength=0.1, ylength=1.0
+  nv=16, vmax=5.0, Tref=1.0
+  quad_type='gauss_hermite', force_type='hermite_symmetric_b', Nm=7
+  cfl=0.5, maxtime=0.001
+  case_id=5, knudsen=0.02, phi=0.1, TwL=1.0, TwR=1.0
+/

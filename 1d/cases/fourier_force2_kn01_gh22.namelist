@@ -1,0 +1,21 @@
+&params
+  nx          = 800
+  xlength     = 1.0
+  nv          = 22
+  vmax        = 5.0
+  Tref        = 1.0
+  quad_type   = 'gauss_hermite'
+  force_type  = 'hermite'
+  Nm          = 10
+  cfl         = 0.5
+  maxtime     = 20.0
+  steady_tol  = 1.0e-9
+  mass_tol    = 1.0e-10
+  steady_steps = 1000
+  case_id     = 4
+  knudsen     = 0.1
+  phi         = 2.0
+  TwL         = 1.0
+  TwR         = 1.1
+  refpfile    = ''
+/
