@@ -200,11 +200,15 @@ If this code is useful in your work, please cite the accompanying paper:
 
 ```bibtex
 @article{liu2025efficient,
-  title   = {An efficient solution algorithm for force-driven continuum and rarefied flows},
-  author  = {Liu, Shuangqing and Li, Zuoxu and Zhang, Yonghao and Xiao, Tianbai},
-  year    = {2025},
-  journal = {arXiv preprint arXiv:2507.10021},
-  doi     = {10.48550/arXiv.2507.10021}
+    title = {An efficient solution algorithm for force-driven continuum and rarefied flows},
+    journal = {Computer Physics Communications},
+    volume = {329},
+    pages = {110365},
+    year = {2026},
+    issn = {0010-4655},
+    doi = {https://doi.org/10.1016/j.cpc.2026.110365},
+    url = {https://www.sciencedirect.com/science/article/pii/S0010465526003474},
+    author = {Shuangqing Liu and Zuoxu Li and Yonghao Zhang and Tianbai Xiao}
 }
 ```
 
